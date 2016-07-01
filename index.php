@@ -27,6 +27,9 @@
             <div class="module form-module">
                 <div class="form">
                     <h2>Reset password</h2>
+                    <?php if (isset($_POST['reset'])): ?>
+                        <div class="success">Email sent</div>
+                    <?php endif; ?>
                     <form method="POST">
                         <input type="text" name="reset" placeholder="Username"/>
                         <button>Reset</button>
@@ -40,6 +43,9 @@
             <div class="module form-module">
                 <div class="form">
                     <h2>Login to your account</h2>
+                    <?php if (isset($_POST['username']) && isset($_POST['password'])): ?>
+                        <div class="error">Invalid login</div>
+                    <?php endif; ?>
                     <form method="POST">
                         <input type="text" name="username" placeholder="Username"/>
                         <input type="password" name="password" placeholder="Password"/>

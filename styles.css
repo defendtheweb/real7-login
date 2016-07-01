@@ -102,3 +102,17 @@ body {
     color: #333333;
     text-decoration: none;
 }
+
+.error {
+    padding: 8px 8px;
+    background: #dd1111;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.success {
+    padding: 8px 8px;
+    background: #117711;
+    color: white;
+    margin-bottom: 14px;
+}
