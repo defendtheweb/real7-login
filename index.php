@@ -27,8 +27,8 @@
             <div class="module form-module">
                 <div class="form">
                     <h2>Reset password</h2>
-                    <form>
-                        <input type="text" placeholder="Username"/>
+                    <form method="POST">
+                        <input type="text" name="reset" placeholder="Username"/>
                         <button>Reset</button>
                     </form>
                 </div>
@@ -40,9 +40,9 @@
             <div class="module form-module">
                 <div class="form">
                     <h2>Login to your account</h2>
-                    <form>
-                        <input type="text" placeholder="Username"/>
-                        <input type="password" placeholder="Password"/>
+                    <form method="POST">
+                        <input type="text" name="username" placeholder="Username"/>
+                        <input type="password" name="password" placeholder="Password"/>
                         <button>Login</button>
                     </form>
                 </div>
