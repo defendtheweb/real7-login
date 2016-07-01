@@ -6,7 +6,7 @@
     }
 
 
-    public function __construct() {
+    function __construct() {
         $this->db = new PDO($dsn, $db_user, $db_pass);
         $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
@@ -22,7 +22,7 @@
     }
 
 
-    public function login($user, $pass) {
+    function login($user, $pass) {
         $st = $this->db->prepare('SELECT `uid`, `username`, `password`
                 FROM users
                 WHERE username = :u');
