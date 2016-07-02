@@ -74,7 +74,7 @@
                 $headers .= 'From: '.$from."\r\n".
                             'Reply-To: '.$from."\r\n";
 
-                mail($to, $subject, $body, $headers)
+                mail($to, $subject, $body, $headers);
             }
         }
 
