@@ -10,7 +10,7 @@
             $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
             if (isset($_SESSION['uid'])) {
-                $this->authorizsed = true;
+                $this->authorized = true;
                 $this->uid = $_SESSION['uid'];
                 $this->username = $_SESSION['username'];
             } else if (isset($_POST['reset'])) {
