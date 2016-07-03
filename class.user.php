@@ -60,7 +60,7 @@
                 $st = $this->db->prepare('UPDATE users SET `reset` = :reset, password = 0 WHERE uid = :uid LIMIT 1');
                 $status = $st->execute(array(':uid' => $row->uid, ':reset' => $token));
 
-                $body = "We received a request for your account details.<br/><br/>Username: {$row->username}<br/>To reset your password, click on this link: <a href='http://www.example.org/?reset={$token}'>http://www.example.org/?reset={$token}/a>";
+                $body = "We received a request for your account details.<br/><br/>Username: {$row->username}<br/>To reset your password, click on this link: <a href='http://www.example.org/?reset={$token}'>http://www.example.org/?reset={$token}</a>";
 
                 $to = $row->email;
                 $subject = 'Password request';
