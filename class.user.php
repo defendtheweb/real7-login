@@ -5,7 +5,7 @@
         public $username;
 
 
-        public function __construct() {
+        public function __construct($dsn, $db_user, $db_pass) {
             $this->db = new PDO($dsn, $db_user, $db_pass);
             $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
