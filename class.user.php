@@ -17,9 +17,7 @@
                 $user = $_POST['reset'];
                 $this->reset($user);
             } else if (isset($_POST['username']) && isset($_POST['password'])) {
-                $user = $_POST['username'];
-                $pass = $_POST['password'];
-                $this->login($user, $pass);
+                $this->login($_POST['username'];, $_POST['password'];);
             }
         }
 
@@ -55,7 +53,7 @@
             $row = $st->fetch();
 
             if ($row) {
-                $token = $this->generateRequest();
+                $token = $this->generateToken();
 
                 $st = $this->db->prepare('UPDATE users SET `reset` = :reset, password = 0 WHERE uid = :uid LIMIT 1');
                 $status = $st->execute(array(':uid' => $row->uid, ':reset' => $token));
@@ -78,7 +76,7 @@
             }
         }
 
-        private function generateRequest() {
+        private function generateToken() {
             $token = md5(openssl_random_pseudo_bytes(32));
             return $token;
         }
