@@ -72,7 +72,7 @@ body {
     margin: 0 0 20px;
     padding: 10px 15px;
     box-sizing: border-box;
-    font-wieght: 400;
+    font-weight: 400;
 }
 .form-module input:focus {
     border: 1px solid #33b5e5;
